@@ -1,0 +1,91 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--Violet);
+    background-image: url(./images/bg-desktop.svg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    padding: 1.5rem;
+}
+
+header {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 3rem 0;
+    color: #fff;
+}
+
+.hero-container .col-1 img {
+    max-width: 100%;
+    display: block;
+}
+
+.hero-container .col-2 h1 {
+    font-size: 2.5rem;
+}
+
+.hero-container .col-2 p {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.hero-container .col-2 button {
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: .8rem 1rem;
+    border: none;
+    border-radius: 3rem;
+    width: 150px;
+    color: var(--Violet);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+@media (max-width: 850px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-container .col-2 {
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .hero-container .col-2 h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-container .col-2 h1 {
+        font-size: 1.5rem;
+    }
+}
